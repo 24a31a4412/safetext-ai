@@ -1,0 +1,137 @@
+@import "tailwindcss";
+
+:root {
+  --background: #f8fafc;
+  --foreground: #172033;
+  --card-background: #ffffff;
+  --card-border: #e7ebf2;
+  --muted-text: #667085;
+  --input-background: #ffffff;
+  --input-border: #d7dde8;
+  --soft-background: #f3f6fa;
+  --shadow-color: rgba(23, 32, 51, 0.07);
+}
+
+.dark {
+  --background: #020617;
+  --foreground: #f8fafc;
+  --card-background: #0f172a;
+  --card-border: rgba(255, 255, 255, 0.1);
+  --muted-text: #94a3b8;
+  --input-background: #020617;
+  --input-border: rgba(255, 255, 255, 0.12);
+  --soft-background: #111827;
+  --shadow-color: rgba(0, 0, 0, 0.25);
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+}
+
+html {
+  background: var(--background);
+  color: var(--foreground);
+}
+
+body {
+  margin: 0;
+  background: var(--background);
+  color: var(--foreground);
+  font-family: Arial, Helvetica, sans-serif;
+  transition: background-color 0.25s ease, color 0.25s ease;
+}
+
+.card,
+.bg-\[var\(--card-background\)\] {
+  transition: background-color 0.25s ease, border-color 0.25s ease, box-shadow 0.25s ease;
+}
+
+:root:not(.dark) .shadow,
+:root:not(.dark) [class*="shadow-"] {
+  --tw-shadow-color: var(--shadow-color);
+}
+
+input,
+textarea,
+select {
+  background-color: var(--input-background);
+  color: var(--foreground);
+  border-color: var(--input-border);
+  transition: background-color 0.2s ease, color 0.2s ease, border-color 0.2s ease;
+}
+
+input::placeholder,
+textarea::placeholder {
+  color: var(--muted-text);
+}
+
+input:focus,
+textarea:focus,
+select:focus {
+  outline: none;
+}
+
+.senior-mode {
+  font-size: 18px;
+  line-height: 1.7;
+  letter-spacing: 0.02em;
+}
+
+.senior-mode h1 { font-size: 2.75rem; line-height: 1.2; }
+.senior-mode h2 { font-size: 1.75rem; line-height: 1.3; }
+.senior-mode h3 { font-size: 1.4rem; line-height: 1.4; }
+
+.senior-mode p,
+.senior-mode span {
+  line-height: 1.7;
+}
+
+.senior-mode button,
+.senior-mode a {
+  min-height: 48px;
+  font-size: 1.05rem;
+}
+
+.senior-mode button { cursor: pointer; }
+
+.senior-mode .senior-important {
+  border-width: 2px;
+  padding: 1.5rem;
+}
+
+:root:not(.dark) .senior-mode {
+  background-color: var(--background);
+}
+
+:root:not(.dark) .senior-mode .senior-important {
+  box-shadow: 0 4px 16px rgba(23, 32, 51, 0.07);
+}
+
+@media (max-width: 640px) {
+  .senior-mode { font-size: 19px; }
+  .senior-mode h1 { font-size: 2.2rem; }
+  .senior-mode h2 { font-size: 1.6rem; }
+
+  .senior-mode button,
+  .senior-mode a {
+    width: 100%;
+    min-height: 52px;
+    font-size: 1.1rem;
+  }
+}
+
+html,
+body,
+button,
+input,
+textarea,
+select,
+div,
+section,
+header,
+nav {
+  transition: background-color 0.2s ease, border-color 0.2s ease, color 0.2s ease;
+}
