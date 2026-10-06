@@ -19,6 +19,7 @@ app = FastAPI(
 # Only allow requests from the SafeText AI frontend.
 ALLOWED_ORIGINS = [
     "http://localhost:3000",
+    "https://safetext-durb0nnrn-safe-text-ai.vercel.app",
 ]
 
 app.add_middleware(
