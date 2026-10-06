@@ -4,7 +4,7 @@ SafeText AI is an AI-powered scam detection and digital safety platform designed
 
 It analyzes messages and other scam-related inputs, calculates a risk score, identifies the threat category, and provides an understandable explanation of why the content may be dangerous.
 
-The platform also provides scan history, scam reporting, heat maps, trends, screenshot scanning, voice scam analysis, and secure user authentication.
+The platform also provides scan history, scam reporting, heat maps, trends, screenshot scanning, voice scam analysis, and secure user authentication. 
 
 ---
 
